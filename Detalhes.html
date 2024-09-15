@@ -1,44 +1,69 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <title>AquaPet</title>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes - AquaPet</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+
+    <!-- Cabeçalho com logo e navegação -->
     <header>
-        <img src="Figma/logo (2).png" width="40" height="30">
-        <h1>AquaPet</h1>
-    </header>
-    <a href="index.html">Inicio</a>
-    <a href="Detalhes.html">Detalhes</a>
-    <a href="autor.html">Autor</a>
-    <a href="Admin.html">Admin</a>
-    <main>
-        <section>
-            <h2>AquaPet e seus Benefícios</h2>
-            <p><b>Cuidado Especializado:</b> Nossa equipe é treinada para lidar com todos os tipos de pelagem e
-                temperamento, garantindo uma experiência segura e confortável para o seu pet.</p>
-            <p><b>Produtos de Alta Qualidade:</b> Utilizamos shampoos e condicionadores premium, que são suaves para a
-                pele e proporcionam brilho e maciez ao pelo do seu pet.</p>
-            <p><b>Ambiente Agradável:</b> Nossos espaços são projetados para reduzir o estresse e proporcionar um
-                ambiente tranquilo e relaxante durante o banho.</p>
-            <p><b>Profissionais Qualificados:</b> Nossa equipe é treinada para lidar com todos os tipos de pelagem e
-                temperamento, garantindo uma experiência segura e confortável para o seu pet.</p>
-            <div class="image-container">
-                <img src="Figma\1.1.png" alt="Imagem 1" width="60" height="70">
-                <img src="Figma\1.2.png" alt="Imagem 2" width="60" height="70">
-                <img src="Figma\1.3.png" alt="Imagem 3" width="60" height="70">
-                <img src="Figma\1.4.png" alt="Imagem 4" width="60" height="70">
+        <div class="logo">
+            <img src="Figma/logo.png" width="40" height="30">
+            <h1>AquaPet</h1>
+        </div>
+
+        <!-- Menu de navegação -->
+        <nav class="nav-bar">
+            <ul class="nav-menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="detalhes.html">Detalhes</a></li>
+                <li><a href="autor.html">Autor</a></li>
+                <li><a href="admin.html">Admin</a></li>
+            </ul>
+
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-            <a href="cadastro.html"><b>Agende o horário do seu Pet!</b></a>
+        </nav>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+        <section class="details">
+            <h2>Serviços Personalizados para o Seu Pet</h2>
+            <p>Na AquaPet, oferecemos diversos serviços de cuidados para seu pet, todos adaptados às necessidades e preferências de cada cliente. Veja abaixo os serviços que proporcionam uma experiência completa para seu amigo de quatro patas:</p>
+
+            <ul>
+                <li>Banho Completo: Limpeza e hidratação da pele e pelagem.</li>
+                <li>Banho Simples: Somente Banho.</li>
+                <li>Tosa: Modelagem e corte de pelagem para diferentes raças.</li>
+                <li>Hidratação: Tratamento especial para pelagens ressecadas.</li>
+                <li>Limpeza de Orelhas e Cortes de Unhas.</li>
+            </ul>
+
+            <a href="cadastro.html" class="cta-button">Agendar Serviço</a>
         </section>
     </main>
+
+    <!-- Rodapé -->
     <footer>
         <a href="autor.html">Saiba mais sobre o autor</a>
-        <p>&copy;Iego Assis da Silva - 2024 AquaPet - Todos os direitos reservados.</p>
+        <p>&copy; 2024 Iego Assis da Silva - AquaPet - Todos os direitos reservados.</p>
     </footer>
-</body>
 
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('nav-menu-visible');
+        });
+    </script>
+
+</body>
 </html>
