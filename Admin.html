@@ -1,52 +1,77 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <title>AquaPet</title>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administração - AquaPet</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-	<img src="Figma/logo (2).png" width="40" height="30">
-        <h1>AquaPet</h1>
-    </header>
-            <a href="index.html">Inicio</a>
-            <a href="Detalhes.html">Detalhes</a>
-            <a href="autor.html">Autor</a>
-            <a href="Admin.html">Admin</a>
 
-            <h2><b>Faça seu login</b></h2>
-            <form>
-                <label for="logar">Login:</label><br>
-                <input type="text" name="login" id="logar"><br>
-                <label for="senha">Senha:</label><br>
-                <input type="password" id="senha" name="password"><br>
-                <input type="submit" value="Login">
-                <input type="submit" value="Esqueceu sua senha?">
+    <!-- Cabeçalho com logo e navegação -->
+    <header>
+        <div class="logo">
+            <img src="Figma/logo (2).png" width="40" height="30">
+            <h1>AquaPet</h1>
+        </div>
+
+        <!-- Menu de navegação -->
+        <nav class="nav-bar">
+            <ul class="nav-menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="detalhes.html">Detalhes</a></li>
+                <li><a href="autor.html">Autor</a></li>
+                <li><a href="admin.html">Admin</a></li>
+            </ul>
+
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+        <section class="admin-panel">
+            <h2>Painel Administrativo</h2>
+            <p>Gerencie os serviços e agendamentos de forma rápida e eficiente. Abaixo estão algumas funcionalidades disponíveis para administradores:</p>
+
+            <ul>
+                <li>Visualizar todos os agendamentos.</li>
+                <li>Editar ou remover agendamentos de clientes.</li>
+                <li>Gerenciar informações sobre serviços.</li>
+                <li>Atualizar preços e ofertas.</li>
+            </ul>
+
+            <form action="admin.html" method="post" class="login-form">
+                <label for="username">Nome de Usuário:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit" class="cta-button">Entrar</button>
+                <a href="#">Esqueceu sua senha?</a>
             </form>
-	            <section>
-                <table border="1" width="80%">
-                    <caption><h2>Usuários Cadastrados</h2></caption>
-                    <tr>
-                        <th>Usuários</th>
-                        <th>Senha</th>
-                    </tr>
-                    <tr>
-                        <td>Ana Soares</td>
-                        <td>*********</td>
-                    </tr>
-                    <tr>
-                        <td>Pedro da Silva</td>
-                        <td>*********</td>
-                    </tr>
-                    <tr>
-                        <td>Roberto Martins</td>
-                        <td>*********</td>
-                    </tr>
-                </table>
-            </section>
-	<footer>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
         <a href="autor.html">Saiba mais sobre o autor</a>
-        <p>&copy;Iego Assis da Silva - 2024 AquaPet - Todos os direitos reservados.</p>
+        <p>&copy; 2024 Iego Assis da Silva - AquaPet - Todos os direitos reservados.</p>
     </footer>
+
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('nav-menu-visible');
+        });
+    </script>
+
 </body>
 </html>
