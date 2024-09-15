@@ -1,105 +1,106 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
-    <title>AquaPet</title>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Agendamento - AquaPet</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+
+    <!-- Cabeçalho com logo e navegação -->
     <header>
-        <img src="Figma/logo (2).png" width="40" height="30" alt="Logo AquaPet">
-        <h1>AquaPet</h1>
+        <div class="logo">
+            <img src="Figma/logo.png" width="40" height="30">
+            <h1>AquaPet</h1>
+        </div>
+
+        <!-- Menu de navegação -->
+        <nav class="nav-bar">
+            <ul class="nav-menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="detalhes.html">Detalhes</a></li>
+                <li><a href="autor.html">Autor</a></li>
+                <li><a href="admin.html">Admin</a></li>
+            </ul>
+
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
     </header>
 
-        <a href="index.html">Início</a>
-        <a href="Detalhes.html">Detalhes</a>
-        <a href="autor.html">Autor</a>
-        <a href="Admin.html">Admin</a>
+    <!-- Conteúdo principal -->
+    <main>
+        <section class="booking-form">
+            <h2>Agende o Banho do Seu Pet</h2>
 
-    <form>
-          <h2>Agendamento</h2>
-        <label for="nome">Nome Completo:</label><br>
-        <input type="text" id="nome"><br>
+            <!-- Formulário de Agendamento -->
+            <form action="submit-booking.html" method="post">
 
-        <label for="telefone">Telefone:</label><br>
-        <input type="text" id="telefone"><br>
+                <!-- Informações do Proprietário -->
+                <h3>Informações do Proprietário</h3>
+                
+                <label for="nomeProprietario">Nome Completo do Proprietário:</label>
+                <input type="text" id="nomeProprietario" name="nomeProprietario" required>
 
-        <label for="datadobanho">Data do Banho:</label><br>
-        <input type="text" id="datadobanho"><br>
+                <label for="telefoneProprietario">Telefone do Proprietário:</label>
+                <input type="tel" id="telefoneProprietario" name="telefoneProprietario" required>
 
-        <label for="horariodisponivel">Horários disponíveis:</label><br>
-        <input type="text" id="horariodisponivel"><br>
+                <label for="emailProprietario">Email do Proprietário:</label>
+                <input type="email" id="emailProprietario" name="emailProprietario" required>
 
-        <label for="nomedopet">Nome do Pet:</label><br>
-        <input type="text" id="nomedopet"><br>
+                <label for="Senha">Senha:</label>
+                <input type="password" id="password" name="Senha" required>
 
-        <label for="raça">Raça do Pet:</label><br>
-        <select id="raça">
-            <option value=""></option>
-            <option value="labrador">Labrador</option>
-            <option value="pinscher">Pinscher</option>
-            <option value="golden">Golden Retriever</option>
-            <option value="poodle">Poodle</option>
-            <option value="pastor">Pastor Alemão</option>
-            <option value="buldogue">Buldogue</option>
-            <option value="srd">SRD - Sem Raça Definida</option>
-            <option value="outra">Outra</option>
-        </select><br>
+                <!-- Informações do Pet -->
+                <h3>Informações do Pet</h3>
 
-        <label for="tipodobanho">Tipo de banho:</label><br>
-        <select id="tipodobanho">
-            <option value=""></option>
-            <option value="simples">Simples</option>
-            <option value="simples_tosa">Simples + tosa</option>
-            <option value="completo">Completo (Tudo que seu Pet merece)</option>
-        </select><br>
+                <label for="nomePet">Nome do Pet:</label>
+                <input type="text" id="nomePet" name="nomePet" required>
 
-        <label for="observação">Observação sobre o Pet:</label><br>
-        <input type="text" id="observação"><br>
+                <label for="tipoPet">Tipo de Pet:</label>
+                <select id="tipoPet" name="tipoPet" required>
+                    <option value="cachorro">Cachorro</option>
+                    <option value="gato">Gato</option>
+                    <option value="outro">Outro</option>
+                </select>
 
-        <input type="submit" value="Enviar">
-    </form>
-        <section>
-        <table border="1" width="80%">
-            <caption><h2>Agendamentos</h2></caption>
-            <tr>
-                <th>Nome completo</th>
-                <th>Telefone</th>
-                <th>Data do banho no Pet</th>
-                <th>Horários disponíveis</th>
-                <th>Nome do Pet</th>
-                <th>Raça do Pet</th>
-                <th>Tipo de banho</th>
-                <th>Observações sobre o Pet</th>
-            </tr>
-            <tr>
-                <td>Ana Soares</td>
-                <td>(88)99192-9394</td>
-                <td>20/09/2024</td>
-                <td>09:00h</td>
-                <td>Pitoco</td>
-                <td>Buldogue</td>
-                <td>Completo</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Pedro da Silva</td>
-                <td>(88)99995-9394</td>
-                <td>20/09/2024</td>
-                <td>10:00h</td>
-                <td>Rabito</td>
-                <td>Pinscher</td>
-                <td>Simples</td>
-                <td></td>
-            </tr>
-        </table>
-    </section>
+                <label for="servicoPet">Escolha o Serviço:</label>
+                <select id="servicoPet" name="servicoPet" required>
+                    <option value="banho">Banho Simples</option>
+                    <option value="banho">Banho Completo (Tudo que seu pet tem direito)</option>
+                    <option value="tosa">Tosa</option>
+                    <option value="hidratação">Hidratação</option>
+                    <option value="unhas">Corte de Unhas</option>
+                </select>
 
+                <label for="dataAgendamento">Data do Agendamento:</label>
+                <input type="date" id="dataAgendamento" name="dataAgendamento" required>
+
+                <button type="submit" class="cta-button">Agendar</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
     <footer>
         <a href="autor.html">Saiba mais sobre o autor</a>
-        <p>&copy; Iego Assis da Silva - 2024 AquaPet - Todos os direitos reservados.</p>
+        <p>&copy; 2024 Iego Assis da Silva - AquaPet - Todos os direitos reservados.</p>
     </footer>
+
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('nav-menu-visible');
+        });
+    </script>
+
 </body>
+</html>
 
 </html>
