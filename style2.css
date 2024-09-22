@@ -1,0 +1,85 @@
+/* Variáveis de cores e temas */
+:root {
+    --primary-color: #1e90ff;
+    --secondary-color: #87cefa;
+    --background-color: #f0f8ff;
+    --text-color: #333333;
+    --cta-color: #4682b4;
+    --cta-hover-color: #4169e1;
+    --border-radius: 8px;
+    --padding: 10px;
+    --margin: 10px;
+}
+
+/* Estilos globais */
+body {
+    font-family: 'Verdana', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+footer {
+    background-color: #0277bd;
+    color: white;
+    text-align: center;
+    padding: 0.5px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.nav-bar {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: white;
+    background-color: var(--secondary-color);
+    padding: var(--padding);
+    margin-bottom: 50px;
+    border-radius: var(--border-radius);
+}
+
+.nav-menu a:hover {
+    background-color: var(--primary-color);
+}
+
+/* Conteúdo principal */
+main {
+    margin-left: 220px; /* Espaço para o menu lateral */
+    padding: 20px;
+}
+
+/* Seção de colunas para a coleção de objetos */
+.collection {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.collection-item {
+    background-color: var(--secondary-color);
+    padding: var(--padding);
+    border-radius: var(--border-radius);
+    text-align: center;
+}
+
+/* Botão de navegação responsivo */
+.nav-toggle {
+    display: none;
+}

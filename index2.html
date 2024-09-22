@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AquaPet - Banho Personalizado para Pets</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+    <!-- Cabeçalho com logo e navegação -->
+    <header>
+        <div class="logo">
+            <img src="Figma/logo.png" width="40" height="30">
+            <h1>AquaPet</h1>
+        </div>
+
+        <!-- Menu de navegação -->
+        <nav class="nav-bar">
+            <ul class="nav-menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="index2.html">Início (Vertical)</a></li>
+                <li><a href="detalhes.html">Detalhes</a></li>
+                <li><a href="autor.html">Autor</a></li>
+                <li><a href="admin.html">Admin</a></li>
+            </ul>
+
+            <!-- Botão de menu responsivo -->
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Seção principal com informações e chamada para ação -->
+    <main>
+        <section class="intro">
+            <h2>Bem-vindo à AquaPet!</h2>
+            <p>Deixe seu pet brilhar com o cuidado que ele merece! Oferecemos uma experiência de banho personalizada, proporcionando conforto, segurança e produtos de alta qualidade para o seu pet.</p>
+            <a href="cadastro.html" class="cta-button">Agende o Banho do Seu Pet!</a>
+        </section>
+
+        <section class="features">
+            <h2>Por que escolher AquaPet?</h2>
+            <div class="features-list">
+                <div class="feature">
+                    <img src="Figma/1.1.png" width="60" height="60">
+                    <h3>Cuidado Especializado</h3>
+                    <p>Equipe treinada para lidar com todos os tipos de pelagem e temperamento, garantindo segurança e conforto para seu pet.</p>
+                </div>
+                <div class="feature">
+                    <img src="Figma/1.2.png" width="60" height="60">
+                    <h3>Produtos Premium</h3>
+                    <p>Shampoos e condicionadores suaves, que proporcionam brilho e maciez ao pelo do seu pet.</p>
+                </div>
+                <div class="feature">
+                    <img src="Figma/1.3.png" width="60" height="60">
+                    <h3>Ambiente Agradável</h3>
+                    <p>Espaços projetados para reduzir o estresse e proporcionar tranquilidade durante o banho.</p>
+                </div>
+                <div class="feature">
+                    <img src="Figma/1.4.png" width="60" height="60">
+                    <h3>Profissionais Qualificados</h3>
+                    <p>Nossa equipe é treinada para garantir que o seu pet tenha a melhor experiência possível.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé com informações sobre o autor e direitos autorais -->
+    <footer>
+        <a href="autor.html">Saiba mais sobre o autor</a>
+        <p>&copy; 2024 Iego Assis da Silva - AquaPet - Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Script para navegação responsiva -->
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('nav-menu-visible');
+        });
+    </script>
+
+</body>
+</html>
