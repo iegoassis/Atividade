@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AquaPet - Banho Personalizado para Pets</title>
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style3.css">
 </head>
 <body>
 
@@ -15,6 +15,10 @@
             <h1>AquaPet</h1>
         </div>
 
+        <!-- Botão de menu responsivo (input e label) -->
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">☰ Menu</label>
+
         <!-- Menu de navegação -->
         <nav class="nav-bar">
             <ul class="nav-menu">
@@ -24,13 +28,6 @@
                 <li><a href="autor.html">Autor</a></li>
                 <li><a href="admin.html">Admin</a></li>
             </ul>
-
-            <!-- Botão de menu responsivo -->
-            <div class="nav-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
         </nav>
     </header>
 
@@ -75,15 +72,8 @@
         <p>&copy; 2024 Iego Assis da Silva - AquaPet - Todos os direitos reservados.</p>
     </footer>
 
-    <!-- Script para navegação responsiva -->
-    <script>
-        const navToggle = document.querySelector('.nav-toggle');
-        const navMenu = document.querySelector('.nav-menu');
-
-        navToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('nav-menu-visible');
-        });
-    </script>
+</body>
+</html>
 
 </body>
 </html>
